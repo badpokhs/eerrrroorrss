@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import CountdownTimer from './Countdown';
 
-import './App.css';
+const App: React.FC = () => {
+  const expiryTimestamp = Date.now() + 86400000; // 24 hours from now
 
-function App() {
   return (
-    <div className="App">
-
+    <div>
+      <h1>Countdown Timer</h1>
+      <CountdownTimer expiryTimestamp={expiryTimestamp} />
     </div>
   );
-}
+};
 
 export default App;
